@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 const githubReleaseUrl = "https://github.com/harrysxu/Nolia/releases/latest";
+const githubRepoUrl = "https://github.com/harrysxu/Nolia";
 const contactEmail = "ailehuoquan@163.com";
 
 const writingFeatures = [
@@ -55,8 +56,6 @@ const accessibilityItems = [
     description: "Keep backlinks readable and let Git handle history without locking your notes into a closed format."
   }
 ];
-
-const platforms = ["macOS", "Windows", "Linux"];
 
 export function App() {
   useHeroSnapScroll();
@@ -171,19 +170,8 @@ export function App() {
                 <ArrowDownToLine size={17} strokeWidth={1.8} aria-hidden="true" />
                 Download
               </a>
-              <a className="secondary-button" href={githubReleaseUrl}>
-                All Releases
-              </a>
             </div>
           </div>
-          <p className="download-links">
-            {platforms.map((platform, index) => (
-              <span key={platform}>
-                <a href={githubReleaseUrl}>{platform}</a>
-                {index < platforms.length - 1 ? " / " : ""}
-              </span>
-            ))}
-          </p>
           <p className="contact-line">
             Contact <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </p>
@@ -197,6 +185,7 @@ export function App() {
         </div>
         <div className="footer-links">
           <a href={githubReleaseUrl}>GitHub Releases</a>
+          <a href={githubRepoUrl}>Repository</a>
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         </div>
       </footer>

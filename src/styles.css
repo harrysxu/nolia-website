@@ -923,9 +923,9 @@ h3 {
 }
 
 .download-section {
-  min-height: 548px;
-  padding-top: clamp(82px, 9vw, 124px);
-  padding-bottom: clamp(80px, 9vw, 118px);
+  min-height: 520px;
+  padding-top: clamp(82px, 9vw, 116px);
+  padding-bottom: clamp(78px, 9vw, 110px);
   background: #f4f4f2;
   text-align: center;
 }
@@ -933,10 +933,10 @@ h3 {
 .download-module {
   display: grid;
   grid-template-columns: 88px minmax(220px, 1fr);
-  gap: 20px 26px;
+  gap: 18px 26px;
   align-items: center;
   width: min(100%, 500px);
-  margin: 62px auto 34px;
+  margin: 58px auto 20px;
   text-align: left;
 }
 
@@ -975,26 +975,21 @@ h3 {
 
 .download-actions {
   display: flex;
-  gap: 14px;
   align-items: center;
 }
 
-.primary-button,
-.secondary-button {
+.primary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 0 20px;
+  min-height: 40px;
+  padding: 0 24px;
   border: 1px solid #4b4b4b;
   border-radius: 2px;
   font-size: 14px;
   font-weight: 450;
-}
-
-.primary-button {
   gap: 8px;
-  min-width: 150px;
+  min-width: 166px;
   background: #4a4a4a;
   color: #ffffff;
 }
@@ -1003,30 +998,12 @@ h3 {
   background: #343434;
 }
 
-.secondary-button {
-  min-width: 126px;
-  background: #ffffff;
-  color: #4b4b4b;
-}
-
-.secondary-button:hover {
-  background: #f6f5f2;
-}
-
-.download-links {
-  margin: 0;
-  color: #77736d;
-  font-size: 13px;
-  font-style: italic;
-}
-
-.download-links a,
 .contact-line a {
   text-decoration: underline;
 }
 
 .contact-line {
-  margin: 16px 0 0;
+  margin: 0;
   color: #77736d;
   font-size: 13px;
 }
@@ -1273,8 +1250,7 @@ h3 {
     width: 100%;
   }
 
-  .primary-button,
-  .secondary-button {
+  .primary-button {
     flex: 1 1 150px;
   }
 
