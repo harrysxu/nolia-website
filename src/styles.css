@@ -975,8 +975,10 @@ h3 {
 
 .download-actions {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   width: 100%;
 }
 
@@ -998,6 +1000,16 @@ h3 {
 
 .primary-button:hover {
   background: #343434;
+}
+
+.source-link {
+  color: #77736d;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.source-link:hover {
+  color: #3f3d39;
 }
 
 .contact-line a {

@@ -170,6 +170,9 @@ export function App() {
                 <ArrowDownToLine size={17} strokeWidth={1.8} aria-hidden="true" />
                 Download
               </a>
+              <a className="source-link" href={githubRepoUrl}>
+                Source code on GitHub
+              </a>
             </div>
           </div>
           <p className="contact-line">
