@@ -12,7 +12,7 @@ import {
   Zap
 } from "lucide-react";
 
-const githubReleaseUrl = "https://github.com/your-org/nolia/releases/latest";
+const githubReleaseUrl = "https://github.com/harrysxu/Nolia/releases/latest";
 const contactEmail = "ailehuoquan@163.com";
 
 const writingFeatures = [

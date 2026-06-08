@@ -25,13 +25,11 @@ as the build and deployment source.
 
 ## Release Links
 
-Download links currently point to a placeholder GitHub Releases URL:
+Download links point to the Nolia GitHub Releases URL:
 
 ```text
-https://github.com/your-org/nolia/releases/latest
+https://github.com/harrysxu/Nolia/releases/latest
 ```
-
-Update `githubReleaseUrl` in `src/App.tsx` when the final release repository is ready.
 
 ## Contact
 
