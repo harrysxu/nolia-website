@@ -1,6 +1,13 @@
 # Nolia Website
 
-Official website for Nolia, a local-first Markdown knowledge workstation.
+Official website for the Nolia product family:
+
+- [Nolia Desktop](https://github.com/harrysxu/Nolia), a local-first Markdown knowledge workstation with controlled AI assistance.
+- [Nolia Reader](https://github.com/harrysxu/nolia-reader), a local-first browser extension for reading and exporting Markdown webpages.
+
+The production website is Chinese-first and presents Desktop and Reader as one local-first product family.
+
+Product screenshots in `public/assets/` are generated from the Nolia and Nolia Reader visual E2E suites. They show real product UI rather than marketing mockups.
 
 ## Development
 
@@ -25,11 +32,17 @@ as the build and deployment source.
 
 ## Release Links
 
-Download links point to the Nolia GitHub Releases URL:
+Desktop download links point to the signed and notarized Nolia 1.0.0 macOS artifacts:
 
 ```text
-https://github.com/harrysxu/Nolia/releases/latest
+https://github.com/harrysxu/Nolia/releases/tag/v1.0.0
 ```
+
+Nolia Reader does not currently publish store or GitHub Release artifacts. The website links to its source installation guide instead.
+
+## Compliance
+
+The production footer displays `京ICP备2026003704号-2` and links to the Ministry of Industry and Information Technology filing system.
 
 ## Contact
 
