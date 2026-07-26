@@ -5,13 +5,13 @@
   --paper-blue: #f1f7f8;
   --ink: #14232b;
   --text: #4e626b;
-  --muted: #7e9097;
+  --muted: #5f7178;
   --line: #d9e2e3;
   --line-strong: #b9c8ca;
   --blue: #126a86;
   --blue-dark: #0c4d63;
-  --teal: #168779;
-  --warm: #d46b3d;
+  --teal: #0f756a;
+  --warm: #a94d27;
   --display: "Avenir Next", Avenir, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-family: var(--display);
   color: var(--text);
@@ -212,7 +212,7 @@ h3 {
   align-items: center;
   gap: 10px;
   margin-bottom: 24px;
-  color: #6f858d;
+  color: #536970;
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 11px;
   font-weight: 650;
@@ -299,7 +299,7 @@ h3 {
   display: flex;
   gap: 22px;
   margin-top: 25px;
-  color: #6e838b;
+  color: #536970;
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 10px;
   text-transform: uppercase;
@@ -344,6 +344,7 @@ h3 {
 }
 
 .chapter-heading h2,
+.knowledge-copy h2,
 .ai-copy h2,
 .reader-heading h2,
 .release-intro h2 {
@@ -354,6 +355,7 @@ h3 {
 }
 
 .chapter-heading > div > p,
+.knowledge-copy > p,
 .ai-copy > p,
 .reader-heading > div > p,
 .release-intro > p {
@@ -378,7 +380,7 @@ h3 {
   border-bottom: 0;
   border-radius: 7px 7px 0 0;
   background: #edf2f2;
-  color: #6e8188;
+  color: #536970;
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 10px;
 }
@@ -431,6 +433,83 @@ h3 {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.7;
+}
+
+.chapter-knowledge {
+  padding: 128px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.knowledge-layout {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.72fr) minmax(610px, 1.38fr);
+  gap: 76px;
+  align-items: center;
+}
+
+.knowledge-copy h2 {
+  margin-bottom: 24px;
+}
+
+.knowledge-copy > p {
+  margin-bottom: 32px;
+}
+
+.knowledge-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line-strong);
+}
+
+.knowledge-item {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 10px;
+  padding: 20px 18px 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.knowledge-item:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.knowledge-item:nth-child(even) {
+  padding-left: 18px;
+}
+
+.knowledge-item > svg {
+  margin-top: 3px;
+  color: var(--warm);
+}
+
+.knowledge-item h3 {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 680;
+}
+
+.knowledge-item p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.discovery-stage {
+  width: calc(100% + max(50px, calc((100vw - 1240px) / 2)));
+}
+
+.discovery-stage > img {
+  border-right: 0;
+  border-radius: 0 0 0 7px;
+  box-shadow: -10px 26px 60px rgba(35, 63, 72, 0.12);
+}
+
+.discovery-stage .stage-label {
+  border-right: 0;
+  border-radius: 7px 0 0 0;
 }
 
 .chapter-ai {
@@ -561,7 +640,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 13px;
-  color: #71868d;
+  color: #536970;
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 10px;
   text-transform: uppercase;
@@ -614,7 +693,7 @@ h3 {
   justify-content: center;
   gap: 24px 45px;
   margin-top: 42px;
-  color: #667b82;
+  color: #536970;
   font-size: 12px;
 }
 
@@ -674,13 +753,54 @@ h3 {
   border-top: 2px solid var(--ink);
 }
 
+.download-panel {
+  min-width: 0;
+}
+
+.platform-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 22px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f2f5f4;
+}
+
+.platform-tabs button {
+  display: inline-flex;
+  min-height: 39px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #536970;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.platform-tabs button:hover {
+  color: var(--blue);
+}
+
+.platform-tabs button.is-active {
+  border-color: var(--line-strong);
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 1px 4px rgba(35, 63, 72, 0.08);
+}
+
 .download-list-head {
   display: flex;
   min-height: 45px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  color: #7a8c93;
+  color: #536970;
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 10px;
   text-transform: uppercase;
@@ -746,7 +866,7 @@ h3 {
 
 .platform-note {
   margin: 30px 0 0;
-  color: #8a9ba1;
+  color: #5f7178;
   font-size: 10px;
 }
 
@@ -888,6 +1008,7 @@ h3 {
   }
 
   .chapter-heading,
+  .knowledge-layout,
   .reader-heading,
   .release-layout,
   .docs-layout {
@@ -902,6 +1023,14 @@ h3 {
   .ai-layout {
     grid-template-columns: 1fr;
     gap: 55px;
+  }
+
+  .knowledge-copy {
+    max-width: 720px;
+  }
+
+  .discovery-stage {
+    width: calc(100% + 28px);
   }
 
   .ai-copy {
@@ -1036,6 +1165,7 @@ h3 {
   }
 
   .chapter-desktop,
+  .chapter-knowledge,
   .chapter-reader,
   .release-section {
     padding: 86px 0 82px;
@@ -1051,6 +1181,7 @@ h3 {
   }
 
   .chapter-heading h2,
+  .knowledge-copy h2,
   .ai-copy h2,
   .reader-heading h2,
   .release-intro h2 {
@@ -1059,6 +1190,7 @@ h3 {
   }
 
   .chapter-heading > div > p,
+  .knowledge-copy > p,
   .ai-copy > p,
   .reader-heading > div > p,
   .release-intro > p {
@@ -1105,6 +1237,29 @@ h3 {
 
   .chapter-ai {
     padding-top: 86px;
+  }
+
+  .knowledge-layout {
+    gap: 42px;
+  }
+
+  .knowledge-list {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-item,
+  .knowledge-item:nth-child(even) {
+    padding: 19px 2px;
+    border-right: 0;
+  }
+
+  .discovery-stage {
+    width: calc(100% + 36px);
+    margin-left: 0;
+  }
+
+  .discovery-stage .stage-label {
+    border-radius: 6px 0 0 0;
   }
 
   .ai-layout {
@@ -1174,6 +1329,11 @@ h3 {
     gap: 52px;
   }
 
+  .platform-tabs button {
+    min-height: 42px;
+    font-size: 11px;
+  }
+
   .release-intro > img {
     width: 64px;
     height: 64px;
@@ -1233,6 +1393,7 @@ h3 {
   }
 
   .chapter-heading h2,
+  .knowledge-copy h2,
   .ai-copy h2,
   .reader-heading h2,
   .release-intro h2 {
