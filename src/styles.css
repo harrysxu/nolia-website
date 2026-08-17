@@ -65,7 +65,6 @@ button:focus-visible {
 img {
   display: block;
   max-width: 100%;
-  filter: grayscale(100%);
 }
 
 h1,
