@@ -347,6 +347,7 @@ h3 {
 .knowledge-copy h2,
 .ai-copy h2,
 .reader-heading h2,
+.lite-heading h2,
 .release-intro h2 {
   margin-bottom: 0;
   font-size: 42px;
@@ -358,6 +359,7 @@ h3 {
 .knowledge-copy > p,
 .ai-copy > p,
 .reader-heading > div > p,
+.lite-heading > div > p,
 .release-intro > p {
   margin-bottom: 3px;
   color: var(--text);
@@ -707,6 +709,81 @@ h3 {
   color: var(--teal);
 }
 
+.chapter-lite {
+  padding: 135px 0 125px;
+  border-top: 1px solid #bfd1cc;
+  background: #eef5f2;
+}
+
+.lite-heading {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(520px, 1.25fr);
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 62px;
+}
+
+.lite-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #536970;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.lite-identity img {
+  width: 58px;
+  height: 58px;
+  border-radius: 11px;
+}
+
+.lite-heading h2 {
+  margin-bottom: 24px;
+}
+
+.lite-heading > div > p {
+  max-width: 680px;
+  margin-bottom: 22px;
+}
+
+.lite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.lite-release-link {
+  font-size: 12px;
+}
+
+.lite-stage {
+  width: min(1050px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.lite-stage > img {
+  max-height: 760px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.lite-facts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--blue);
+  font-weight: 680;
+}
+
+.lite-facts a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
 .release-section {
   padding: 125px 0 120px;
   border-top: 1px solid var(--line);
@@ -1010,6 +1087,7 @@ h3 {
   .chapter-heading,
   .knowledge-layout,
   .reader-heading,
+  .lite-heading,
   .release-layout,
   .docs-layout {
     grid-template-columns: 1fr;
@@ -1041,7 +1119,8 @@ h3 {
     width: calc(100% + 28px);
   }
 
-  .reader-heading > div:last-child {
+  .reader-heading > div:last-child,
+  .lite-heading > div:last-child {
     max-width: 720px;
   }
 
@@ -1167,6 +1246,7 @@ h3 {
   .chapter-desktop,
   .chapter-knowledge,
   .chapter-reader,
+  .chapter-lite,
   .release-section {
     padding: 86px 0 82px;
   }
@@ -1184,6 +1264,7 @@ h3 {
   .knowledge-copy h2,
   .ai-copy h2,
   .reader-heading h2,
+  .lite-heading h2,
   .release-intro h2 {
     font-size: 31px;
     line-height: 1.42;
@@ -1193,6 +1274,7 @@ h3 {
   .knowledge-copy > p,
   .ai-copy > p,
   .reader-heading > div > p,
+  .lite-heading > div > p,
   .release-intro > p {
     font-size: 13px;
     line-height: 1.85;
@@ -1302,17 +1384,20 @@ h3 {
     display: none;
   }
 
-  .reader-heading {
+  .reader-heading,
+  .lite-heading {
     gap: 32px;
     margin-bottom: 42px;
   }
 
-  .reader-identity img {
+  .reader-identity img,
+  .lite-identity img {
     width: 49px;
     height: 49px;
   }
 
-  .reader-stage {
+  .reader-stage,
+  .lite-stage {
     width: calc(100% + 16px);
     margin-left: -8px;
   }
@@ -1396,6 +1481,7 @@ h3 {
   .knowledge-copy h2,
   .ai-copy h2,
   .reader-heading h2,
+  .lite-heading h2,
   .release-intro h2 {
     font-size: 28px;
   }

@@ -28,6 +28,9 @@ import {
 const noliaVersion = "1.0.1";
 const noliaRepoUrl = "https://github.com/harrysxu/Nolia";
 const noliaReleaseUrl = `${noliaRepoUrl}/releases/tag/v${noliaVersion}`;
+const liteVersion = "1.0.0";
+const liteRepoUrl = "https://github.com/harrysxu/NoliaLite";
+const liteReleaseUrl = `${liteRepoUrl}/releases/tag/v${liteVersion}`;
 const readerRepoUrl = "https://github.com/harrysxu/nolia-reader";
 const userManualUrl = `${noliaRepoUrl}/blob/main/docs/user/USER_MANUAL.md`;
 const upgradeGuideUrl = `${noliaRepoUrl}/blob/main/docs/release/UPGRADE.md`;
@@ -35,6 +38,11 @@ const pluginGuideUrl = `${noliaRepoUrl}/blob/main/docs/plugins/PLUGIN_DEVELOPMEN
 const contactEmail = "ailehuoquan@163.com";
 const icpRegistrationNumber = "京ICP备2026003704号-2";
 const icpRegistrationUrl = "https://beian.miit.gov.cn/";
+
+const liteDownloads = {
+  arm64: `${liteRepoUrl}/releases/download/v${liteVersion}/Nolia-Lite-${liteVersion}-macos-arm64.dmg`,
+  x64: `${liteRepoUrl}/releases/download/v${liteVersion}/Nolia-Lite-${liteVersion}-macos-x86_64.dmg`
+};
 
 type PlatformId = "macos" | "windows" | "linux";
 
@@ -223,6 +231,7 @@ export function App() {
           <a href="#knowledge" onClick={() => setMenuOpen(false)}>知识系统</a>
           <a href="#ai" onClick={() => setMenuOpen(false)}>受控 AI</a>
           <a href="#reader" onClick={() => setMenuOpen(false)}>Reader</a>
+          <a href="#lite" onClick={() => setMenuOpen(false)}>Lite</a>
           <a href="#docs" onClick={() => setMenuOpen(false)}>文档</a>
           <a href={noliaRepoUrl} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={13} /></a>
           <a className="nav-download" href="#download" onClick={() => setMenuOpen(false)}>下载 {noliaVersion}</a>
@@ -374,6 +383,46 @@ export function App() {
           </div>
         </section>
 
+        <section id="lite" className="chapter chapter-lite">
+          <div className="page-width">
+            <div className="lite-heading">
+              <div>
+                <p className="chapter-index"><span>05</span> Nolia Lite</p>
+                <div className="lite-identity">
+                  <img src="/assets/nolia-lite-app-icon.png" alt="" />
+                  <span>Markdown editor · {liteVersion}</span>
+                </div>
+              </div>
+              <div>
+                <h2>只想打开一份 Markdown，<br />直接开始写。</h2>
+                <p>
+                  Nolia Lite 是生态中的轻量级 Markdown 编辑器。一个窗口只处理一份文档，连续所见即所得、标准 Markdown 与本地保存构成全部核心；没有工作区、知识库、AI 或账号负担。
+                  1.0.0 当前支持 macOS 13 及以上系统，Apple 芯片与 Intel DMG 均已完成签名和公证。
+                </p>
+                <div className="lite-actions" aria-label="下载 Nolia Lite 1.0.0">
+                  <a className="button button-primary" href={liteDownloads.arm64}><ArrowDownToLine size={16} /> Apple 芯片</a>
+                  <a className="button button-quiet" href={liteDownloads.x64}><ArrowDownToLine size={16} /> Intel 芯片</a>
+                </div>
+                <a className="text-link lite-release-link" href={liteReleaseUrl} target="_blank" rel="noreferrer">
+                  Nolia Lite {liteVersion} 发布说明与 SHA256 <ArrowUpRight size={15} />
+                </a>
+              </div>
+            </div>
+
+            <figure className="product-stage lite-stage">
+              <div className="stage-label"><span>MARKDOWN_ELEMENT_SHOWCASE.md</span><span>真实 Nolia Lite {liteVersion} 界面</span></div>
+              <img src={`/assets/nolia-lite-editor.jpg?v=${liteVersion}`} alt="Nolia Lite 的单文档大纲、连续所见即所得 Markdown 编辑画布与按光标显现的语法" />
+            </figure>
+
+            <div className="reader-facts lite-facts" aria-label="Nolia Lite 功能">
+              <span><FileText size={16} /> 连续所见即所得</span>
+              <span><Laptop size={16} /> 单文档多原生窗口</span>
+              <span><ShieldCheck size={16} /> 本地运行，不上传文档</span>
+              <a href={liteRepoUrl} target="_blank" rel="noreferrer">查看源代码 <ArrowUpRight size={14} /></a>
+            </div>
+          </div>
+        </section>
+
         <section id="download" className="release-section">
           <div className="page-width release-layout">
             <div className="release-intro">
@@ -442,7 +491,7 @@ export function App() {
       <footer className="site-footer">
         <div className="page-width footer-layout">
           <div className="footer-brand"><img src="/assets/nolia-app-icon.png" alt="" /><span><strong>Nolia</strong><small>你的文件，你的模型，你的知识工作台。</small></span></div>
-          <div className="footer-links"><a href={noliaRepoUrl} target="_blank" rel="noreferrer">GitHub</a><a href={readerRepoUrl} target="_blank" rel="noreferrer">Reader</a><a href={`mailto:${contactEmail}`}>联系</a></div>
+          <div className="footer-links"><a href={noliaRepoUrl} target="_blank" rel="noreferrer">GitHub</a><a href={liteRepoUrl} target="_blank" rel="noreferrer">Lite</a><a href={readerRepoUrl} target="_blank" rel="noreferrer">Reader</a><a href={`mailto:${contactEmail}`}>联系</a></div>
           <div className="footer-legal"><span>Copyright {new Date().getFullYear()} Nolia</span><a href={icpRegistrationUrl} target="_blank" rel="noreferrer">{icpRegistrationNumber}</a></div>
         </div>
       </footer>
