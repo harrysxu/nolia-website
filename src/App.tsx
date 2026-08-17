@@ -25,6 +25,8 @@ import {
   X
 } from "lucide-react";
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}assets/${path}`;
+
 const noliaVersion = "1.0.1";
 const noliaRepoUrl = "https://github.com/harrysxu/Nolia";
 const noliaReleaseUrl = `${noliaRepoUrl}/releases/tag/v${noliaVersion}`;
@@ -211,7 +213,7 @@ export function App() {
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Nolia 首页" onClick={() => setMenuOpen(false)}>
-          <img src="/assets/nolia-app-icon.png" alt="" />
+          <img src={assetUrl("nolia-app-icon.png")} alt="" />
           <span>Nolia</span>
         </a>
 
@@ -241,7 +243,7 @@ export function App() {
       <main id="top">
         <section className="hero-section" aria-labelledby="hero-title">
           <div className="hero-background" aria-hidden="true">
-            <img src={`/assets/nolia-workspace.png?v=${noliaVersion}`} alt="" />
+            <img src={assetUrl(`nolia-workspace.png?v=${noliaVersion}`)} alt="" />
           </div>
           <div className="hero-content page-width">
             <p className="hero-kicker"><span>Local-first</span> Knowledge Workspace · {noliaVersion}</p>
@@ -276,7 +278,7 @@ export function App() {
 
             <figure className="product-stage workspace-stage">
               <div className="stage-label"><span>~/Documents/Nolia/workspace</span><span>真实 Nolia {noliaVersion} 界面</span></div>
-              <img src={`/assets/nolia-workspace.png?v=${noliaVersion}`} alt={`Nolia ${noliaVersion} 的文件导航、多文档标签、Markdown 分屏编辑与文档检查器`} />
+              <img src={assetUrl(`nolia-workspace.png?v=${noliaVersion}`)} alt={`Nolia ${noliaVersion} 的文件导航、多文档标签、Markdown 分屏编辑与文档检查器`} />
             </figure>
 
             <div className="feature-ledger">
@@ -311,7 +313,7 @@ export function App() {
 
             <figure className="product-stage discovery-stage">
               <div className="stage-label"><span>Discover · Exact / Hybrid</span><span>标题、正文、路径、标签、属性、任务</span></div>
-              <img src="/assets/nolia-discovery.png" alt="Nolia 发现页中的统一搜索、精确与混合模式、标签和保存搜索" />
+              <img src={assetUrl("nolia-discovery.png")} alt="Nolia 发现页中的统一搜索、精确与混合模式、标签和保存搜索" />
             </figure>
           </div>
         </section>
@@ -334,7 +336,7 @@ export function App() {
 
             <figure className="product-stage ai-stage">
               <div className="stage-label"><span>AI task history</span><span>对话 · 执行记录 · 变更</span></div>
-              <img src={`/assets/nolia-ai.png?v=${noliaVersion}`} alt="Nolia AI 的持久任务详情、对话历史、执行记录与文件变更" />
+              <img src={assetUrl(`nolia-ai.png?v=${noliaVersion}`)} alt="Nolia AI 的持久任务详情、对话历史、执行记录与文件变更" />
             </figure>
           </div>
 
@@ -355,7 +357,7 @@ export function App() {
               <div>
                 <p className="chapter-index"><span>04</span> Nolia Reader</p>
                 <div className="reader-identity">
-                  <img src="/assets/nolia-reader-icon.png" alt="" />
+                  <img src={assetUrl("nolia-reader-icon.png")} alt="" />
                   <span>Browser extension · 0.1.0</span>
                 </div>
               </div>
@@ -372,7 +374,7 @@ export function App() {
 
             <figure className="product-stage reader-stage">
               <div className="stage-label"><span>README.md</span><span>Chrome · Edge · Firefox</span></div>
-              <img src="/assets/nolia-reader-ui.png" alt="Nolia Reader 的文档目录、阅读主题和 Markdown 阅读界面" />
+              <img src={assetUrl("nolia-reader-ui.png")} alt="Nolia Reader 的文档目录、阅读主题和 Markdown 阅读界面" />
             </figure>
 
             <div className="reader-facts" aria-label="Nolia Reader 功能">
@@ -389,7 +391,7 @@ export function App() {
               <div>
                 <p className="chapter-index"><span>05</span> Nolia Lite</p>
                 <div className="lite-identity">
-                  <img src="/assets/nolia-lite-app-icon.png" alt="" />
+                  <img src={assetUrl("nolia-lite-app-icon.png")} alt="" />
                   <span>Markdown editor · {liteVersion}</span>
                 </div>
               </div>
@@ -411,7 +413,7 @@ export function App() {
 
             <figure className="product-stage lite-stage">
               <div className="stage-label"><span>MARKDOWN_ELEMENT_SHOWCASE.md</span><span>真实 Nolia Lite {liteVersion} 界面</span></div>
-              <img src={`/assets/nolia-lite-editor.jpg?v=${liteVersion}`} alt="Nolia Lite 的单文档大纲、连续所见即所得 Markdown 编辑画布与按光标显现的语法" />
+              <img src={assetUrl(`nolia-lite-editor.jpg?v=${liteVersion}`)} alt="Nolia Lite 的单文档大纲、连续所见即所得 Markdown 编辑画布与按光标显现的语法" />
             </figure>
 
             <div className="reader-facts lite-facts" aria-label="Nolia Lite 功能">
@@ -426,7 +428,7 @@ export function App() {
         <section id="download" className="release-section">
           <div className="page-width release-layout">
             <div className="release-intro">
-              <img src="/assets/nolia-app-icon.png" alt="" />
+              <img src={assetUrl("nolia-app-icon.png")} alt="" />
               <p className="chapter-index"><span>Release</span> Nolia {noliaVersion}</p>
               <h2>把工作区留在<br />自己的电脑里。</h2>
               <p>选择你的平台，直接从 GitHub Release 下载经过验收的正式产物。</p>
@@ -490,7 +492,7 @@ export function App() {
 
       <footer className="site-footer">
         <div className="page-width footer-layout">
-          <div className="footer-brand"><img src="/assets/nolia-app-icon.png" alt="" /><span><strong>Nolia</strong><small>你的文件，你的模型，你的知识工作台。</small></span></div>
+          <div className="footer-brand"><img src={assetUrl("nolia-app-icon.png")} alt="" /><span><strong>Nolia</strong><small>你的文件，你的模型，你的知识工作台。</small></span></div>
           <div className="footer-links"><a href={noliaRepoUrl} target="_blank" rel="noreferrer">GitHub</a><a href={liteRepoUrl} target="_blank" rel="noreferrer">Lite</a><a href={readerRepoUrl} target="_blank" rel="noreferrer">Reader</a><a href={`mailto:${contactEmail}`}>联系</a></div>
           <div className="footer-legal"><span>Copyright {new Date().getFullYear()} Nolia</span><a href={icpRegistrationUrl} target="_blank" rel="noreferrer">{icpRegistrationNumber}</a></div>
         </div>
